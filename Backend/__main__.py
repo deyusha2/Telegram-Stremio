@@ -4,7 +4,6 @@ import secrets
 from traceback import format_exc
 
 from pyrogram import idle
-from starlette.middleware.sessions import SessionMiddleware
 
 from Backend import __version__, db
 from Backend.fastapi import server
@@ -34,7 +33,6 @@ async def start_services():
         await asyncio.sleep(1.2)
 
         await SettingsManager.initialize(db)
-        app.add_middleware(SessionMiddleware, secret_key=SettingsManager.current().session_secret or secrets.token_hex(32))
         await asyncio.sleep(0.5)
 
         await scan_manager.load(db)
