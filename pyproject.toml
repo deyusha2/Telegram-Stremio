@@ -31,3 +31,6 @@ dependencies = [
 dev = [
     "deptry>=0.23.1",
 ]
+
+[tool.vercel]
+entrypoint = "Backend.fastapi.main:app"
