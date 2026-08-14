@@ -1,4 +1,6 @@
 import asyncio
+import secrets
+from starlette.middleware.sessions import SessionMiddleware
 
 from fastapi import Depends, FastAPI, Form, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -146,6 +148,11 @@ app = FastAPI(
 )
 
 #----- Middleware
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=secrets.token_hex(32)
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
