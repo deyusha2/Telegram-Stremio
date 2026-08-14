@@ -33,4 +33,4 @@ dev = [
 ]
 
 [tool.vercel]
-entrypoint = "Backend.fastapi.main:app"
+entrypoint = "Backend.__main__:app"
