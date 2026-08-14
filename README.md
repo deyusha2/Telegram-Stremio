@@ -889,3 +889,4 @@ Your server is a standard **Stremio-style addon**, so it works in any compatible
 |:---:|:---:|:---:|:---:|
 |[`Karan`](https://github.com/Weebzone)|[`Stremio`](https://github.com/Stremio)|[`ChatGPT`](https://github.com/OPENAI)|[`VFlix Prime`](https://t.me/vflixprime2)|
 |Author|Stremio SDK|Refactor|Community Support|
+  
